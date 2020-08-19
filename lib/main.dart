@@ -3,6 +3,8 @@ void main() {
     CheckPassword("isa", "isa");
   } catch (e) {
     print(e);
+  } finally {
+    print("just checking if code execute");
   }
 }
 
