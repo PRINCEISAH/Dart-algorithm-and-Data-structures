@@ -1,31 +1,5 @@
 void main() {
-  var student1 = Student(
-      name: "isah",
-      age: 25,
-      course: ["cpt413", "cpt416", 'LiT328'],
-      level: "400L",
-      paid: true);
-  var student2 = Student(
-      name: "nana",
-      age: 20,
-      paid: false,
-      course: ["mat211", "mat231", "mat215"],
-      level: "200");
-
-  var studd = [
-    Student(
-        name: "isah",
-        age: 25,
-        course: ["cpt413", "cpt416", 'LiT328'],
-        level: "400L",
-        paid: true),
-    Student(
-        name: "nana",
-        age: 20,
-        paid: false,
-        course: ["mat211", "mat231", "mat215"],
-        level: "200")
-  ];
+  // A list of student
   List<Student> listStudent = [
     Student(
         name: "isah",
@@ -48,16 +22,24 @@ void main() {
   ];
 
   listStudent.asMap().entries.map((e) => print(e.value));
-  Map map = {'isah': 21, 'Aminu': 30, 'nana': 17};
-  print(map);
-  var listofmaps = [];
 
-  map.forEach((key, value) => listofmaps.add({key: value}));
+  Map map = {
+    'isah': 21,
+    'Aminu': 30,
+    'nana': 17
+  }; // a map with dynamic key and value
+  print(map); //{isah: 21, Aminu: 30, nana: 17}
 
-  print(listofmaps);
+  var listofmaps = []; // and empty list to add a list of map
+
+  map.forEach((key, value) => listofmaps.add({
+        key: value
+      })); // for each of the iterable in map  add the key and value as a map
+
+  print(listofmaps); // [{isah: 21}, {Aminu: 30}, {nana: 17}]
   var length = listofmaps.length;
 
-  print(length);
+  print(length); //3
 
   var mapoflistofstudent =
       Map.fromIterable(listStudent, key: (e) => e.name, value: (e) => e.age);
