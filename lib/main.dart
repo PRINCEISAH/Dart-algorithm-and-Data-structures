@@ -1,27 +1,59 @@
 void main(List<String> args) {
-  // checkForPalindrome('isahaudu');
-  var c = checkfor('wow');
-  print(c);
+  var x = accumulation('abcd');
+  print(accumulatonMap('xvsfdf'));
+  // var c = capitalizeFirstLetter('bbbbb');
+  // print(c);
+  // print(x);
 }
 
-checkForPalindrome(String word) {
-  var wordsToLowecase = word.toLowerCase();
-  int lengthOfWord = wordsToLowecase.length;
+accumulation(String a) {
+  List<String> result = [];
 
-  num lengthDivison = lengthOfWord / 2;
+  String resultAccum;
 
-  var firsthalf = wordsToLowecase.substring(0, 4);
-  var secondhalf = wordsToLowecase.substring(4);
-  print(firsthalf);
-  print(secondhalf);
-}
+  var letterToUpperCase = a.toUpperCase();
 
-checkfor(String word) {
-  var reverse = word.split('').reversed.join();
+  for (var i = 0; i < letterToUpperCase.length; i++) {
+    var str = letterToUpperCase[i].toUpperCase();
 
-  if (word == reverse) {
-    print('yes');
-  } else {
-    print('false');
+    for (var j = 0; j < i; j++) {
+      str += letterToUpperCase[i];
+    }
+    result.add(str);
   }
+
+  // resultAccum = result[2].toLowerCase();
+
+  // result.forEach((element) {
+  //   String tolowecase = element.toLowerCase();
+  //   String cap = tolowecase[0].toUpperCase() + tolowecase.substring(1);
+  //   print(cap);
+  //   // print(capit);
+  //   return cap;
+  // });
+
+  // print(resultAccum);
+  print(result);
+  // return result;
+  // resultAccum = result.join('-');
+  // return resultAccum;
 }
+
+accumulatonMap(String s) {
+  String res = "";
+
+  for (int i = 0; i < s.length; i++) {
+    String lower = s.substring(i, i + 1).toLowerCase();
+    String upper = s.substring(i, i + 1).toUpperCase();
+    res += upper;
+    for (int j = 1; j <= i; j++) {
+      res += lower;
+    }
+    if (i != s.length - 1) {
+      res += "-";
+    }
+  }
+  return res;
+}
+
+String capitalizeFirstLetter(String s) => s[0].toUpperCase() + s.substring(1);
