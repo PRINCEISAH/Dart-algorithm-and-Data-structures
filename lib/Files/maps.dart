@@ -52,7 +52,12 @@ class Student {
   final String level;
   final bool paid;
   final List<String> course;
-  Student({this.name, this.age, this.level, this.course, this.paid});
+  Student(
+      {required this.name,
+      required this.age,
+      required this.level,
+      required this.course,
+      required this.paid});
 }
 
 class Studentt {

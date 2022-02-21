@@ -1,17 +1,13 @@
 void main(List<String> args) {
-  var x = solve([3, 4, 4, 3, 6, 3]);
+  // List<String> fruits = ['Banana', 'Watermelon', 'Pineapple', 'Orange'];
+  // fruits.forEach(
+  //     (fruit) => print(fruit)); // => banana watermelon pineapple orange
 
-  var y = solve([20, 20, 1, 202, 1, 1, 3]);
+  // List<String> mappedFruits = fruits.map((fruit) => 'I like $fruit').toList();
+  // print(mappedFruits); // => [I like Banana, I like Watermelon, I like Pineapple, I like Orange]
 
-  // numbers.forEach((element) {
-  //   numbers.contains(element);
-  //   x.add(element);
-  // });
-  // for (var i = 0; i < numbers.length; i++) {
-  //   print(numbers[i]);
-  // }
-  print(x);
-  print(y);
+  List<int> numbers = [7, 4, 2, 6, 5, 1];
+  numbers.sort((num1, num2) => num2 - num1); // => [1, 2, 3, 4, 5]
+
+  print(numbers);
 }
-
-List solve(List<int> arr) => arr.reversed.toSet().toList();
