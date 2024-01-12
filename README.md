@@ -1,4 +1,4 @@
-# dart Algorithms
+# Dart Algorithms and Data structures
 
 
 This repository is a comprehensive collection covering Data Structures and Algorithms concepts, offering diverse implementations. It encompasses programming questions and interview challenges sourced from prominent platforms such as LeetCode, HackerRank, Codechef, GeeksforGeeks, and others in dart programming language.
